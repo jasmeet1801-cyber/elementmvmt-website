@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — Element Movement CrossFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-hero{background:linear-gradient(135deg,#edf4fb 0%,#e6f1f9 50%,#f5f6f8 100%);padding:8rem 2.5rem 4rem;position:relative;overflow:hidden}
+    .page-hero::before{content:'START';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Barlow Condensed',sans-serif;font-size:clamp(7rem,16vw,15rem);font-weight:900;color:rgba(43,100,177,.05);pointer-events:none;user-select:none;line-height:1;white-space:nowrap}
+    .page-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:3.5rem;align-items:center}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;text-transform:uppercase;line-height:.95;color:var(--charcoal);margin-bottom:1.2rem}
+    .page-hero h1 .bd{color:var(--bd)}
+    .page-hero h1 .bl{color:var(--bl)}
+    .page-hero p{font-size:.97rem;color:var(--mid);max-width:460px;line-height:1.75;margin-bottom:2rem}
+
+    /* Info cards on right */
+    .hero-info-cards{display:flex;flex-direction:column;gap:.9rem}
+    .info-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:1.3rem 1.4rem;box-shadow:0 2px 12px rgba(43,100,177,.06)}
+    .info-card-icon{font-size:1.3rem;margin-bottom:.5rem}
+    .info-card-title{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--charcoal);margin-bottom:.25rem}
+    .info-card-text{font-size:.8rem;color:var(--muted);line-height:1.55}
+
+    /* Steps section */
+    .steps-section{padding:5rem 2.5rem;background:var(--white)}
+    .steps-inner{max-width:1100px;margin:0 auto}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+    .step{position:relative;padding-top:1rem}
+    .step-num{font-family:'Barlow Condensed',sans-serif;font-size:4.5rem;font-weight:900;color:rgba(43,100,177,.08);line-height:1;margin-bottom:-.6rem}
+    .step-title{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--charcoal);margin-bottom:.6rem}
+    .step-desc{font-size:.88rem;line-height:1.7;color:var(--muted)}
+    .step::after{content:'';display:block;width:3rem;height:3px;background:var(--bd);margin-top:1.2rem}
+
+    /* Membership preview */
+    .mem-section{padding:5rem 2.5rem;background:var(--offwhite)}
+    .mem-inner{max-width:1100px;margin:0 auto}
+
+    /* FAQ-style expectations */
+    .expect-section{padding:5rem 2.5rem;background:var(--white)}
+    .expect-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .expect-list{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.9rem}
+    .expect-list li{font-size:.9rem;line-height:1.7;color:var(--mid);display:flex;gap:.8rem;align-items:flex-start}
+    .expect-list li::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--bl);flex-shrink:0;margin-top:.55rem}
+    .expect-img{background:var(--lightblue);border:1px solid rgba(113,191,234,.2);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .expect-img img{width:100%;height:100%;object-fit:cover}
+    .no-commitment{background:var(--bd);border-radius:8px;padding:1.5rem 1.8rem;margin-top:2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;text-align:center}
+    .nc-item-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:900;color:#fff;text-transform:uppercase}
+    .nc-item-sub{font-size:.68rem;color:rgba(255,255,255,.65);margin-top:.2rem;letter-spacing:.04em}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="Element Movement CrossFit">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#classes">Classes</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="index.html#rates">Rates</a></li>
+    <li><a href="index.html#team">Our Team</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="get-started.html">Get Started</a>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="eyebrow">Welcome to EMC</div>
+      <h1>Your <span class="bd">First</span><br>Step <span class="bl">Starts</span><br>Here.</h1>
+      <p>Whether you've never done CrossFit or you're coming from another gym — everyone starts somewhere. Our coaches will make sure you hit the ground running.</p>
+      <div class="hero-btns">
+        <a class="btn-pri" href="https://elementmvmt.sites.zenplanner.com/zenplanner/app/signup.cfm" target="_blank">Register Now</a>
+        <a class="btn-sec" href="contact.html">Ask a Question</a>
+      </div>
+    </div>
+    <div class="hero-info-cards">
+      <div class="info-card">
+        <div class="info-card-icon">📍</div>
+        <div class="info-card-title">2450 Bristol Circle</div>
+        <div class="info-card-text">Oakville, ON L6H 6P6 · Open 7 days a week with AM &amp; PM classes</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">💬</div>
+        <div class="info-card-title">Questions? We've Got You.</div>
+        <div class="info-card-text">Call (905) 499-3744 or email hello@elementmvmt.com — we're happy to chat before you come in.</div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🏆</div>
+        <div class="info-card-title">Official CrossFit Affiliate</div>
+        <div class="info-card-text">L3 head coach. 14 coaches on staff. 100% coached sessions — every class, every time.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mi">CrossFit <span>✦</span></div>
+    <div class="mi">All Levels Welcome <span>✦</span></div>
+    <div class="mi">Expert Coaching <span>✦</span></div>
+    <div class="mi">No Sign-Up Fee <span>✦</span></div>
+    <div class="mi">Oakville, Ontario <span>✦</span></div>
+    <div class="mi">Month-to-Month <span>✦</span></div>
+    <div class="mi">CrossFit <span>✦</span></div>
+    <div class="mi">All Levels Welcome <span>✦</span></div>
+    <div class="mi">Expert Coaching <span>✦</span></div>
+    <div class="mi">No Sign-Up Fee <span>✦</span></div>
+    <div class="mi">Oakville, Ontario <span>✦</span></div>
+    <div class="mi">Month-to-Month <span>✦</span></div>
+  </div>
+</div>
+
+<!-- Steps -->
+<section class="steps-section">
+  <div class="steps-inner">
+    <div class="sec-eye">How It Works</div>
+    <h2 class="sec-h2">Three Steps to <span class="bd">Day One</span></h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Choose a Membership</div>
+        <div class="step-desc">Browse our simple, month-to-month membership options below. No sign-up fee, no cancellation fee, no long-term commitment. Pick what works for your schedule and budget.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Register Online</div>
+        <div class="step-desc">Sign up through ZenPlanner — our member portal. It takes about 3 minutes. Once you're set up you can book classes, track your progress, and access SugarWOD.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Show Up &amp; Move</div>
+        <div class="step-desc">Walk in, introduce yourself, and let your coach take it from there. Every class is led start to finish. You'll leave having moved well, worked hard, and met a few great people.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Membership Preview -->
+<section class="mem-section">
+  <div class="mem-inner">
+    <div class="sec-eye">Membership</div>
+    <h2 class="sec-h2">Simple, <span class="bd">Honest</span> Pricing</h2>
+    <p style="font-size:.9rem;color:var(--mid);margin-top:.6rem">All memberships are month-to-month. No sign-up fee. No cancellation fee. Includes ZenPlanner &amp; SugarWOD access.</p>
+    <div class="rates-grid" style="margin-top:2rem">
+      <div class="rc feat">
+        <div class="feat-pill">Most Popular</div>
+        <div class="rname">Prime</div>
+        <div class="rprice"><sup>$</sup>225</div>
+        <div class="rperiod">per month + HST</div>
+        <ul class="rfeats">
+          <li>Unlimited CrossFit classes</li>
+          <li>Athlete Development (AD)</li>
+          <li>Open gym + FOB access</li>
+          <li>Free workshops</li>
+          <li>ZenPlanner + SugarWOD</li>
+        </ul>
+      </div>
+      <div class="rc">
+        <div class="rname">Unlimited</div>
+        <div class="rprice"><sup>$</sup>195</div>
+        <div class="rperiod">per month + HST</div>
+        <ul class="rfeats">
+          <li>Unlimited CrossFit classes</li>
+          <li>Excludes AD classes</li>
+          <li>ZenPlanner + SugarWOD</li>
+        </ul>
+      </div>
+      <div class="rc">
+        <div class="rname">Basic</div>
+        <div class="rprice"><sup>$</sup>175</div>
+        <div class="rperiod">per month + HST</div>
+        <ul class="rfeats">
+          <li>12 classes per month</li>
+          <li>Excludes AD classes</li>
+          <li>ZenPlanner + SugarWOD</li>
+        </ul>
+      </div>
+      <div class="rc">
+        <div class="rname">Drop-In</div>
+        <div class="rprice"><sup>$</sup>25</div>
+        <div class="rperiod">per class + HST</div>
+        <ul class="rfeats">
+          <li>Single class</li>
+          <li>Excludes AD classes</li>
+          <li>Perfect for first-timers</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:.76rem;color:var(--muted);margin-top:1rem;text-align:center">First Responders &amp; family members receive 10% off. Only 1 discount per member.</p>
+    <div style="text-align:center;margin-top:1.8rem">
+      <a class="btn-pri" href="https://elementmvmt.sites.zenplanner.com/zenplanner/app/signup.cfm" target="_blank">Register Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- What to Expect -->
+<section class="expect-section">
+  <div class="expect-inner">
+    <div>
+      <div class="sec-eye">What to Expect</div>
+      <h2 class="sec-h2">Your First <span class="bd">Class</span></h2>
+      <ul class="expect-list">
+        <li>Show up 5–10 minutes early so your coach can introduce themselves and walk you through the space.</li>
+        <li>Every class starts with a coach-led warm-up — no experience needed to follow along.</li>
+        <li>Movements are always scaled to your current fitness level. Nobody lifts the same load on day one.</li>
+        <li>Coaches watch your form and give cues throughout. Your safety is always the priority.</li>
+        <li>After class, stick around — the community is one of the best parts of EMC.</li>
+        <li>Wear comfortable athletic wear and bring a water bottle. We have everything else.</li>
+      </ul>
+      <div class="no-commitment">
+        <div><div class="nc-item-title">No</div><div class="nc-item-sub">Sign-Up Fee</div></div>
+        <div><div class="nc-item-title">No</div><div class="nc-item-sub">Cancellation Fee</div></div>
+        <div><div class="nc-item-title">No</div><div class="nc-item-sub">Long-Term Lock-In</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="expect-img">
+        <img src="images/gym_community.png" alt="EMC community">
+      </div>
+      <div style="margin-top:1.5rem;background:var(--offwhite);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--charcoal);margin-bottom:.5rem">Have Questions First?</div>
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:1rem">Reach out before you come in — we're happy to answer anything. Most people have the same questions, and our coaches love talking about this stuff.</p>
+        <a class="btn-sec" href="contact.html" style="font-size:.72rem;padding:.7rem 1.4rem">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta" id="trial">
+  <img class="cta-logo" src="images/logo-white.png" alt="Element Movement CrossFit">
+  <h2>Ready to <em>Move?</em></h2>
+  <p>Come see what the EMC community is all about — no pressure, no long-term commitment required.</p>
+  <div class="cta-btns">
+    <a class="btn-wh" href="https://elementmvmt.sites.zenplanner.com/zenplanner/app/signup.cfm" target="_blank">Register Now</a>
+    <a class="btn-ol" href="contact.html">Contact Us</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <img src="images/logo-white.png" alt="Element Movement CrossFit">
+  </div>
+  <div class="fl-info">
+    2450 Bristol Circle, Oakville ON L6H 6P6<br>
+    hello@elementmvmt.com · (905) 499-3744
+  </div>
+  <div class="fl-links">
+    <a href="https://www.instagram.com/element.mvmt/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/ElementMvmt" target="_blank">Facebook</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <span class="fl-badge">Official CrossFit Affiliate</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

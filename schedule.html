@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Schedule — Element Movement CrossFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-hero{background:linear-gradient(135deg,#edf4fb 0%,#e6f1f9 50%,#f5f6f8 100%);padding:8rem 2.5rem 4rem;position:relative;overflow:hidden}
+    .page-hero::before{content:'SCHEDULE';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Barlow Condensed',sans-serif;font-size:clamp(6rem,14vw,13rem);font-weight:900;color:rgba(43,100,177,.05);pointer-events:none;user-select:none;line-height:1;white-space:nowrap}
+    .page-hero-inner{max-width:1100px;margin:0 auto}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;text-transform:uppercase;line-height:.95;color:var(--charcoal);margin-bottom:1rem}
+    .page-hero h1 .bd{color:var(--bd)}
+    .page-hero p{font-size:.97rem;color:var(--mid);max-width:520px;line-height:1.75}
+
+    .schedule-section{padding:4rem 2.5rem;background:var(--white)}
+    .schedule-inner{max-width:1100px;margin:0 auto}
+
+    /* Static schedule grid */
+    .sched-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:2.5rem}
+    .sday{background:var(--white)}
+    .sday-head{background:var(--charcoal);padding:.9rem .8rem;text-align:center}
+    .sday-head-name{font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#fff}
+    .sday-body{padding:.9rem .7rem}
+    .stime{font-size:.78rem;color:var(--mid);padding:.32rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.4rem;line-height:1.2}
+    .stime:last-child{border-bottom:none}
+    .stime-pill{display:inline-block;font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.15rem .4rem;border-radius:3px;white-space:nowrap;flex-shrink:0}
+    .pill-ad{background:rgba(43,100,177,.1);color:var(--bd)}
+    .pill-teen{background:rgba(113,191,234,.15);color:#2a7faa}
+    .pill-holiday{background:rgba(155,158,163,.1);color:var(--gr)}
+
+    /* Legend */
+    .legend{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.4rem}
+    .legend-item{display:flex;align-items:center;gap:.45rem;font-size:.72rem;color:var(--muted)}
+    .legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+    .ld-cf{background:var(--border)}
+    .ld-ad{background:rgba(43,100,177,.2)}
+    .ld-teen{background:rgba(113,191,234,.3)}
+
+    /* ZenPlanner embed */
+    .zp-section{padding:4rem 2.5rem;background:var(--offwhite)}
+    .zp-inner{max-width:1100px;margin:0 auto}
+    .zp-embed{border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;margin-top:2rem;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+    .zp-embed iframe{width:100%;height:680px;border:none;display:block}
+
+    /* Book strip */
+    .book-strip{background:var(--charcoal);padding:3rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+    .book-strip h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1}
+    .book-strip h3 em{font-style:normal;color:var(--bl)}
+    .book-strip-btns{display:flex;gap:.8rem;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="Element Movement CrossFit">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#classes">Classes</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="index.html#rates">Rates</a></li>
+    <li><a href="index.html#team">Our Team</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="get-started.html">Get Started</a>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Class Schedule</div>
+    <h1>When We <span class="bd">Train.</span></h1>
+    <p>Classes run 7 days a week with morning and evening slots. Book your spot through ZenPlanner below.</p>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mi">CrossFit <span>✦</span></div>
+    <div class="mi">7 Days a Week <span>✦</span></div>
+    <div class="mi">AM + PM Slots <span>✦</span></div>
+    <div class="mi">Expert Coaching <span>✦</span></div>
+    <div class="mi">Oakville, Ontario <span>✦</span></div>
+    <div class="mi">All Levels Welcome <span>✦</span></div>
+    <div class="mi">CrossFit <span>✦</span></div>
+    <div class="mi">7 Days a Week <span>✦</span></div>
+    <div class="mi">AM + PM Slots <span>✦</span></div>
+    <div class="mi">Expert Coaching <span>✦</span></div>
+    <div class="mi">Oakville, Ontario <span>✦</span></div>
+    <div class="mi">All Levels Welcome <span>✦</span></div>
+  </div>
+</div>
+
+<!-- Static Weekly Overview -->
+<section class="schedule-section">
+  <div class="schedule-inner">
+    <div class="sec-eye">Weekly Overview</div>
+    <h2 class="sec-h2">This <span class="bd">Week's</span> Times</h2>
+
+    <div class="sched-grid">
+      <!-- Monday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Mon</div></div>
+        <div class="sday-body">
+          <div class="stime">5:45 AM</div>
+          <div class="stime">7:00 AM</div>
+          <div class="stime">9:00 AM</div>
+          <div class="stime">5:30 PM</div>
+          <div class="stime">6:45 PM</div>
+        </div>
+      </div>
+      <!-- Tuesday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Tue</div></div>
+        <div class="sday-body">
+          <div class="stime">5:45 AM</div>
+          <div class="stime">7:00 AM</div>
+          <div class="stime">9:00 AM</div>
+          <div class="stime">5:30 PM</div>
+          <div class="stime"><span class="stime-pill pill-ad">AD</span> 6:30 PM</div>
+        </div>
+      </div>
+      <!-- Wednesday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Wed</div></div>
+        <div class="sday-body">
+          <div class="stime">5:45 AM</div>
+          <div class="stime">7:00 AM</div>
+          <div class="stime">9:00 AM</div>
+          <div class="stime">5:30 PM</div>
+          <div class="stime">6:45 PM</div>
+        </div>
+      </div>
+      <!-- Thursday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Thu</div></div>
+        <div class="sday-body">
+          <div class="stime">5:45 AM</div>
+          <div class="stime">7:00 AM</div>
+          <div class="stime">9:00 AM</div>
+          <div class="stime">5:30 PM</div>
+        </div>
+      </div>
+      <!-- Friday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Fri</div></div>
+        <div class="sday-body">
+          <div class="stime">5:45 AM</div>
+          <div class="stime">7:00 AM</div>
+          <div class="stime">9:00 AM</div>
+          <div class="stime">5:30 PM</div>
+        </div>
+      </div>
+      <!-- Saturday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Sat</div></div>
+        <div class="sday-body">
+          <div class="stime"><span class="stime-pill pill-ad">AD</span> 8:00 AM</div>
+          <div class="stime">9:30 AM</div>
+        </div>
+      </div>
+      <!-- Sunday -->
+      <div class="sday">
+        <div class="sday-head"><div class="sday-head-name">Sun</div></div>
+        <div class="sday-body">
+          <div class="stime">9:30 AM</div>
+          <div class="stime"><span class="stime-pill pill-teen">Teens</span> 10:30 AM</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot ld-cf"></div>CrossFit WOD — All levels</div>
+      <div class="legend-item"><div class="legend-dot ld-ad"></div>AD — Athlete Development (Prime or AD pass required)</div>
+      <div class="legend-item"><div class="legend-dot ld-teen"></div>Teens CrossFit — Ages 10–17</div>
+    </div>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:1rem">Holiday schedule: 9:00 AM class. Open gym available 24/7 outside of scheduled class times (FOB access required).</p>
+  </div>
+</section>
+
+<!-- ZenPlanner Live Calendar -->
+<section class="zp-section">
+  <div class="zp-inner">
+    <div class="sec-eye">Book a Class</div>
+    <h2 class="sec-h2">Reserve Your <span class="bd">Spot</span></h2>
+    <p style="font-size:.9rem;color:var(--mid);margin-top:.6rem;max-width:540px;line-height:1.75">The live calendar below is powered by ZenPlanner. Log in or create an account to reserve your spot in any upcoming class.</p>
+    <div class="zp-embed">
+      <iframe
+        src="https://elementmvmt.sites.zenplanner.com/calendar.cfm"
+        title="Element Movement CrossFit — Class Calendar"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Book Strip -->
+<div class="book-strip">
+  <div>
+    <h3>Not a Member Yet?<br><em>Your first class is a drop-in.</em></h3>
+  </div>
+  <div class="book-strip-btns">
+    <a class="btn-bl" href="get-started.html">Get Started</a>
+    <a class="btn-ol" href="contact.html">Contact Us</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="footer-logo">
+    <img src="images/logo-white.png" alt="Element Movement CrossFit">
+  </div>
+  <div class="fl-info">
+    2450 Bristol Circle, Oakville ON L6H 6P6<br>
+    hello@elementmvmt.com · (905) 499-3744
+  </div>
+  <div class="fl-links">
+    <a href="https://www.instagram.com/element.mvmt/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/ElementMvmt" target="_blank">Facebook</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <span class="fl-badge">Official CrossFit Affiliate</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
