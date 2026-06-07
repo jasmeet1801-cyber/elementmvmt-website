@@ -100,9 +100,10 @@ section{padding:5rem 2.5rem}
 .fact{border-left:3px solid var(--bd);padding-left:.8rem}
 .fact-n{font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;font-weight:900;color:var(--bd);line-height:1}
 .fact-l{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.about-vis{background:var(--lightblue);border:1px solid rgba(113,191,234,.2);border-radius:8px;position:relative;overflow:hidden}
-.about-vis img{width:100%;height:auto;display:block;border-radius:0}
-.about-badge{position:absolute;bottom:0;left:0;right:0;background:var(--bd);color:#fff;padding:.7rem 1rem;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.about-col{display:flex;flex-direction:column;gap:.8rem}
+.about-vis{background:var(--lightblue);border:1px solid rgba(113,191,234,.2);border-radius:8px;overflow:hidden}
+.about-vis img{width:100%;height:auto;display:block}
+.about-badge{background:var(--bd);color:#fff;padding:.7rem 1rem;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:center;border-radius:6px}
 
 /* ============================================
    Classes
