@@ -49,6 +49,23 @@
     .book-strip h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1}
     .book-strip h3 em{font-style:normal;color:var(--bl)}
     .book-strip-btns{display:flex;gap:.8rem;flex-wrap:wrap}
+  @media(max-width:900px){
+    .sched-grid{grid-template-columns:repeat(4,1fr)}
+    .sday:nth-child(n+5){border-top:1px solid var(--border)}
+    .zp-embed iframe{height:520px}
+    .book-strip{flex-direction:column;align-items:flex-start}
+  }
+  @media(max-width:600px){
+    .page-hero{padding:6rem 1.2rem 2.5rem}
+    .sched-grid{grid-template-columns:repeat(2,1fr)}
+    .zp-section{padding:3rem 1.2rem}
+    .schedule-section{padding:3rem 1.2rem}
+    .zp-embed iframe{height:420px}
+    .book-strip{padding:2.2rem 1.2rem}
+    .book-strip-btns{flex-direction:column;width:100%}
+    .book-strip-btns a{text-align:center}
+    .legend{flex-direction:column;gap:.7rem}
+  }
   </style>
 </head>
 <body>
@@ -66,6 +83,7 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a class="nav-cta" href="get-started.html">Get Started</a>
+  <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- Page Hero -->

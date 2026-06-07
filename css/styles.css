@@ -206,3 +206,108 @@ footer{background:var(--charcoal);padding:2.2rem 2.5rem;display:grid;grid-templa
 .fl-links a{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
 .fl-links a:hover{color:var(--bl)}
 .fl-badge{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(113,191,234,.35);padding:.28rem .62rem;border-radius:2px;white-space:nowrap}
+
+/* ============================================
+   Hamburger Nav Button
+   ============================================ */
+.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:40px;height:40px;background:none;border:1.5px solid var(--border);border-radius:4px;cursor:pointer;padding:8px;flex-shrink:0}
+.nav-burger span{display:block;width:18px;height:2px;background:var(--charcoal);border-radius:2px;transition:transform .25s,opacity .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============================================
+   Responsive — Tablet (≤ 900px)
+   ============================================ */
+@media(max-width:900px){
+  /* Nav */
+  .nav-burger{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:.5rem 0;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:.85rem 2rem;font-size:.78rem}
+
+  /* Hero */
+  .hero{padding:6rem 1.5rem 3rem}
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-right{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+  .logo-card{display:none}
+  .hcard-dark{grid-column:1/-1}
+
+  /* About */
+  .about-inner{grid-template-columns:1fr;gap:2.5rem}
+  .about-vis{aspect-ratio:16/7}
+
+  /* Classes */
+  .classes-grid{grid-template-columns:1fr 1fr}
+  .cc:nth-child(3n){border-right:1px solid var(--border)}
+  .cc:nth-child(2n){border-right:none}
+  .cc:nth-child(n+4){border-bottom:1px solid var(--border)}
+  .cc:last-child{border-bottom:none;border-right:none}
+
+  /* Rates */
+  .rates-grid{grid-template-columns:1fr 1fr}
+
+  /* Add-ons */
+  .addons-grid{grid-template-columns:1fr 1fr}
+
+  /* Team */
+  .team-grid{grid-template-columns:repeat(4,1fr)}
+
+  /* Schedule banner */
+  .sched{flex-direction:column;align-items:flex-start;gap:1.2rem}
+
+  /* Footer */
+  footer{grid-template-columns:1fr 1fr;row-gap:1.4rem}
+  .footer-logo{grid-column:1/-1}
+  .fl-badge{justify-self:end;align-self:center}
+}
+
+/* ============================================
+   Responsive — Mobile (≤ 600px)
+   ============================================ */
+@media(max-width:600px){
+  nav{padding:.6rem 1.2rem}
+  .nav-cta{font-size:.65rem;padding:.45rem .9rem}
+
+  section{padding:3.5rem 1.2rem}
+
+  /* Hero */
+  .hero{padding:5.5rem 1.2rem 2.5rem}
+  .hero-right{grid-template-columns:1fr}
+  .hcard-row{display:grid;grid-template-columns:1fr 1fr}
+  .hcard-dark{grid-column:unset}
+
+  /* About */
+  .facts{grid-template-columns:1fr 1fr}
+
+  /* Classes */
+  .classes-grid{grid-template-columns:1fr}
+  .cc{border-right:none!important}
+  .cc:nth-child(n+1){border-bottom:1px solid var(--border)}
+  .cc:last-child{border-bottom:none}
+
+  /* Schedule banner */
+  .sched{padding:2.4rem 1.2rem}
+
+  /* Rates */
+  .rates-grid{grid-template-columns:1fr}
+
+  /* Add-ons */
+  .addons-grid{grid-template-columns:1fr}
+
+  /* Team */
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* CTA */
+  .cta{padding:3.5rem 1.2rem}
+  .cta-btns{flex-direction:column;align-items:center}
+
+  /* Footer */
+  footer{grid-template-columns:1fr;text-align:center;padding:2rem 1.2rem}
+  .fl-links{justify-content:center}
+  .fl-badge{justify-self:center}
+
+  /* Marquee */
+  .marquee-wrap{padding:.6rem 0}
+}
