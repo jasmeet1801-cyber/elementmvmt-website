@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members — Element Movement CrossFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-hero{background:linear-gradient(135deg,#edf4fb 0%,#e6f1f9 50%,#f5f6f8 100%);padding:11rem 2.5rem 4rem;position:relative;overflow:hidden}
+    .page-hero::before{content:'MEMBERS';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Barlow Condensed',sans-serif;font-size:clamp(6rem,13vw,12rem);font-weight:900;color:rgba(43,100,177,.05);pointer-events:none;user-select:none;line-height:1;white-space:nowrap}
+    .page-hero-inner{max-width:1100px;margin:0 auto}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;text-transform:uppercase;line-height:.95;color:var(--charcoal);margin-bottom:1rem}
+    .page-hero h1 .bd{color:var(--bd)}
+    .page-hero p{font-size:.97rem;color:var(--mid);max-width:520px;line-height:1.75}
+
+    .members-section{padding:5rem 2.5rem;background:var(--white)}
+    .members-inner{max-width:1100px;margin:0 auto}
+    .members-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+
+    .mcard{background:var(--offwhite);border:1.5px solid var(--border);border-radius:8px;padding:2.2rem 2rem;text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+    .mcard:hover{border-color:var(--bd);box-shadow:0 6px 24px rgba(43,100,177,.12);transform:translateY(-3px)}
+    .mcard-icon{font-size:2rem;margin-bottom:1rem}
+    .mcard-title{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--charcoal);margin-bottom:.6rem}
+    .mcard-desc{font-size:.88rem;line-height:1.7;color:var(--muted);flex:1}
+    .mcard-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bd);margin-top:1.4rem}
+    .mcard-link::after{content:'→';transition:transform .2s}
+    .mcard:hover .mcard-link::after{transform:translateX(4px)}
+    .mcard-pill{display:inline-block;font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;margin-bottom:.8rem}
+    .pill-coming{background:rgba(155,158,163,.12);color:var(--gr);border:1px solid rgba(155,158,163,.3)}
+    .pill-live{background:rgba(43,100,177,.1);color:var(--bd);border:1px solid rgba(43,100,177,.2)}
+
+    @media(max-width:600px){
+      .page-hero{padding:9rem 1.2rem 2.5rem}
+      .members-section{padding:3rem 1.2rem}
+      .members-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-c5.png" alt="Element Movement CrossFit">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#classes">Classes</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="index.html#rates">Rates</a></li>
+    <li><a href="index.html#team">Our Team</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-members" href="members.html">Members</a>
+  <a class="nav-cta" href="get-started.html">Get Started</a>
+  <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Member Resources</div>
+    <h1>Your <span class="bd">Member</span> Hub</h1>
+    <p>Everything you need in one place — your membership agreement, hold requests, weekly workouts, and the whiteboard.</p>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mi">Member Resources <span>✦</span></div>
+    <div class="mi">Weekly WOD <span>✦</span></div>
+    <div class="mi">Membership Agreement <span>✦</span></div>
+    <div class="mi">Hold Form <span>✦</span></div>
+    <div class="mi">Whiteboard <span>✦</span></div>
+    <div class="mi">Element Movement CrossFit <span>✦</span></div>
+    <div class="mi">Member Resources <span>✦</span></div>
+    <div class="mi">Weekly WOD <span>✦</span></div>
+    <div class="mi">Membership Agreement <span>✦</span></div>
+    <div class="mi">Hold Form <span>✦</span></div>
+    <div class="mi">Whiteboard <span>✦</span></div>
+    <div class="mi">Element Movement CrossFit <span>✦</span></div>
+  </div>
+</div>
+
+<!-- Members Grid -->
+<section class="members-section">
+  <div class="members-inner">
+    <div class="sec-eye">Quick Access</div>
+    <h2 class="sec-h2">What Do You <span class="bd">Need?</span></h2>
+    <div class="members-grid">
+
+      <a class="mcard" href="wod.html">
+        <div class="mcard-icon">🏋️</div>
+        <span class="mcard-pill pill-live">Updated Weekly</span>
+        <div class="mcard-title">Weekly WOD</div>
+        <div class="mcard-desc">See what's on the board this week. Check upcoming workouts, movements, and programming notes so you can plan your training.</div>
+        <span class="mcard-link">View This Week's WOD</span>
+      </a>
+
+      <a class="mcard" href="whiteboard.html">
+        <div class="mcard-icon">📋</div>
+        <span class="mcard-pill pill-live">Live</span>
+        <div class="mcard-title">Whiteboard</div>
+        <div class="mcard-desc">Results, scores, and benchmarks. See how the community is performing and log your own results.</div>
+        <span class="mcard-link">View Whiteboard</span>
+      </a>
+
+      <a class="mcard" href="membership-agreement.html">
+        <div class="mcard-icon">📄</div>
+        <span class="mcard-pill pill-live">Document</span>
+        <div class="mcard-title">Membership Agreement</div>
+        <div class="mcard-desc">Review or download your membership terms and conditions. Includes all policies, billing details, and member responsibilities.</div>
+        <span class="mcard-link">View Agreement</span>
+      </a>
+
+      <a class="mcard" href="hold.html">
+        <div class="mcard-icon">⏸️</div>
+        <span class="mcard-pill pill-live">Form</span>
+        <div class="mcard-title">Hold Form</div>
+        <div class="mcard-desc">Going on vacation or need to pause? Submit a membership hold request here. Holds are $25/month for up to 3 months.</div>
+        <span class="mcard-link">Submit a Hold Request</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <img src="images/logo-c5.png" alt="Element Movement CrossFit">
+  </div>
+  <div class="fl-info">
+    2450 Bristol Circle, Oakville ON L6H 6P6<br>
+    hello@elementmvmt.com · (905) 499-3744
+  </div>
+  <div class="fl-links">
+    <a href="https://www.instagram.com/element.mvmt/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/ElementMvmt" target="_blank">Facebook</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <span class="fl-badge">Official CrossFit Affiliate</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

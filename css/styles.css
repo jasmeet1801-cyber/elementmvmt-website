@@ -31,6 +31,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover{color:var(--bd)}
 .nav-cta{background:var(--bd);color:#fff;padding:0.55rem 1.3rem;font-size:0.73rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s}
 .nav-cta:hover{background:#1e5090}
+.nav-members{border:2px solid var(--bd);color:var(--bd);padding:0.5rem 1.2rem;font-size:0.73rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .2s;white-space:nowrap}
+.nav-members:hover{background:var(--bd);color:#fff}
 
 /* ============================================
    Hero

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Agreement — Element Movement CrossFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-hero{background:linear-gradient(135deg,#edf4fb 0%,#e6f1f9 50%,#f5f6f8 100%);padding:11rem 2.5rem 4rem;position:relative;overflow:hidden}
+    .page-hero::before{content:'AGREE';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Barlow Condensed',sans-serif;font-size:clamp(7rem,14vw,13rem);font-weight:900;color:rgba(43,100,177,.05);pointer-events:none;user-select:none;line-height:1;white-space:nowrap}
+    .page-hero-inner{max-width:1100px;margin:0 auto}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;text-transform:uppercase;line-height:.95;color:var(--charcoal);margin-bottom:1rem}
+    .page-hero h1 .bd{color:var(--bd)}
+    .page-hero p{font-size:.97rem;color:var(--mid);max-width:520px;line-height:1.75}
+
+    .agreement-section{padding:5rem 2.5rem;background:var(--white)}
+    .agreement-inner{max-width:1100px;margin:0 auto}
+
+    .placeholder-slot{background:var(--lightblue);border:2px dashed rgba(43,100,177,.2);border-radius:8px;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem;margin-top:2.5rem}
+    .placeholder-slot p{font-size:.88rem;color:var(--muted);max-width:480px;margin:.8rem auto 0;line-height:1.75}
+
+    @media(max-width:600px){
+      .page-hero{padding:9rem 1.2rem 2.5rem}
+      .agreement-section{padding:3rem 1.2rem}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-c5.png" alt="Element Movement CrossFit">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#classes">Classes</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="index.html#rates">Rates</a></li>
+    <li><a href="index.html#team">Our Team</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-members" href="members.html">Members</a>
+  <a class="nav-cta" href="get-started.html">Get Started</a>
+  <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow"><a href="members.html" style="color:var(--bd);text-decoration:none">← Members</a></div>
+    <h1>Membership <span class="bd">Agreement</span></h1>
+    <p>Review your membership terms and conditions, billing details, and member responsibilities.</p>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mi">Membership Agreement <span>✦</span></div>
+    <div class="mi">Month-to-Month <span>✦</span></div>
+    <div class="mi">No Cancellation Fee <span>✦</span></div>
+    <div class="mi">No Sign-Up Fee <span>✦</span></div>
+    <div class="mi">Element Movement CrossFit <span>✦</span></div>
+    <div class="mi">Membership Agreement <span>✦</span></div>
+    <div class="mi">Month-to-Month <span>✦</span></div>
+    <div class="mi">No Cancellation Fee <span>✦</span></div>
+    <div class="mi">No Sign-Up Fee <span>✦</span></div>
+    <div class="mi">Element Movement CrossFit <span>✦</span></div>
+  </div>
+</div>
+
+<!-- Agreement Content -->
+<section class="agreement-section">
+  <div class="agreement-inner">
+    <div class="sec-eye">Member Document</div>
+    <h2 class="sec-h2">Your <span class="bd">Agreement</span></h2>
+
+    <!-- ============================================================
+         PLACEHOLDER — Paste the membership agreement text or embed
+         a PDF/document viewer here when content is ready.
+         ============================================================ -->
+    <div class="placeholder-slot">
+      <div style="font-size:2.5rem;margin-bottom:1rem">📄</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;color:var(--charcoal);margin-bottom:.5rem">Content Coming Soon</div>
+      <p>The membership agreement will be displayed here. You can paste the agreement text directly into this page, embed a PDF, or link to the document.</p>
+      <a class="btn-sec" href="contact.html" style="margin-top:1.5rem;font-size:.72rem;padding:.7rem 1.4rem">Questions? Contact Us</a>
+    </div>
+    <!-- ============================================================ -->
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <img src="images/logo-c5.png" alt="Element Movement CrossFit">
+  </div>
+  <div class="fl-info">
+    2450 Bristol Circle, Oakville ON L6H 6P6<br>
+    hello@elementmvmt.com · (905) 499-3744
+  </div>
+  <div class="fl-links">
+    <a href="https://www.instagram.com/element.mvmt/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/ElementMvmt" target="_blank">Facebook</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <span class="fl-badge">Official CrossFit Affiliate</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

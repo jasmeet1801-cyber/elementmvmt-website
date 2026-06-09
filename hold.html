@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Hold — Element Movement CrossFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-hero{background:linear-gradient(135deg,#edf4fb 0%,#e6f1f9 50%,#f5f6f8 100%);padding:11rem 2.5rem 4rem;position:relative;overflow:hidden}
+    .page-hero::before{content:'HOLD';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Barlow Condensed',sans-serif;font-size:clamp(8rem,18vw,16rem);font-weight:900;color:rgba(43,100,177,.05);pointer-events:none;user-select:none;line-height:1;white-space:nowrap}
+    .page-hero-inner{max-width:1100px;margin:0 auto}
+    .page-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:900;text-transform:uppercase;line-height:.95;color:var(--charcoal);margin-bottom:1rem}
+    .page-hero h1 .bd{color:var(--bd)}
+    .page-hero p{font-size:.97rem;color:var(--mid);max-width:520px;line-height:1.75}
+
+    .hold-section{padding:5rem 2.5rem;background:var(--white)}
+    .hold-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start}
+
+    /* Policy column */
+    .policy-cards{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+    .pc{background:var(--offwhite);border:1.5px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem;transition:border-color .2s}
+    .pc-label{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bd);margin-bottom:.4rem}
+    .pc-value{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--charcoal)}
+    .pc-sub{font-size:.8rem;color:var(--muted);margin-top:.3rem;line-height:1.55}
+
+    .notice-box{background:rgba(43,100,177,.06);border:1.5px solid rgba(43,100,177,.2);border-radius:8px;padding:1.3rem 1.5rem;margin-top:1.5rem}
+    .notice-box p{font-size:.83rem;color:var(--mid);line-height:1.7;margin:0}
+    .notice-box strong{color:var(--charcoal)}
+
+    /* Form column */
+    .hold-form{display:flex;flex-direction:column;gap:1.1rem;margin-top:2rem}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .form-group{display:flex;flex-direction:column;gap:.4rem}
+    .form-group label{font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid)}
+    .form-group label .req{color:var(--bd)}
+    .form-group input,
+    .form-group select,
+    .form-group textarea{font-family:'Barlow',sans-serif;font-size:.88rem;color:var(--charcoal);background:var(--offwhite);border:1.5px solid var(--border);border-radius:4px;padding:.75rem 1rem;transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{border-color:var(--bd);box-shadow:0 0 0 3px rgba(43,100,177,.1);background:#fff}
+    .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236e7280' d='M6 8L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+    .form-group textarea{resize:vertical;min-height:90px}
+    .checkbox-group{display:flex;align-items:flex-start;gap:.75rem;background:var(--offwhite);border:1.5px solid var(--border);border-radius:4px;padding:1rem 1.1rem}
+    .checkbox-group input[type=checkbox]{width:16px;height:16px;flex-shrink:0;margin-top:.15rem;accent-color:var(--bd)}
+    .checkbox-group label{font-size:.82rem;color:var(--mid);line-height:1.6;cursor:pointer;letter-spacing:0;text-transform:none;font-weight:400}
+    .form-submit{background:var(--bd);color:#fff;border:none;padding:.9rem 2.2rem;font-family:'Barlow',sans-serif;font-size:.77rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:background .2s,transform .15s;align-self:flex-start}
+    .form-submit:hover{background:#1e5090;transform:translateY(-2px)}
+
+    @media(max-width:900px){
+      .hold-inner{grid-template-columns:1fr;gap:3rem}
+    }
+    @media(max-width:600px){
+      .page-hero{padding:9rem 1.2rem 2.5rem}
+      .hold-section{padding:3rem 1.2rem}
+      .form-row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-c5.png" alt="Element Movement CrossFit">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#classes">Classes</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="index.html#rates">Rates</a></li>
+    <li><a href="index.html#team">Our Team</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-members" href="members.html">Members</a>
+  <a class="nav-cta" href="get-started.html">Get Started</a>
+  <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow"><a href="members.html" style="color:var(--bd);text-decoration:none">← Members</a></div>
+    <h1>Membership <span class="bd">Hold</span></h1>
+    <p>Need to pause your membership? Complete the form below. Please read the hold policy before submitting.</p>
+  </div>
+</div>
+
+<!-- Marquee -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mi">Membership Hold <span>✦</span></div>
+    <div class="mi">Min 1 Month <span>✦</span></div>
+    <div class="mi">Max 3 Months <span>✦</span></div>
+    <div class="mi">$25 + HST / Month <span>✦</span></div>
+    <div class="mi">2 Weeks Notice Required <span>✦</span></div>
+    <div class="mi">Membership Hold <span>✦</span></div>
+    <div class="mi">Min 1 Month <span>✦</span></div>
+    <div class="mi">Max 3 Months <span>✦</span></div>
+    <div class="mi">$25 + HST / Month <span>✦</span></div>
+    <div class="mi">2 Weeks Notice Required <span>✦</span></div>
+  </div>
+</div>
+
+<!-- Hold Form -->
+<section class="hold-section">
+  <div class="hold-inner">
+
+    <!-- Left: Policy -->
+    <div>
+      <div class="sec-eye">Hold Policy</div>
+      <h2 class="sec-h2">Before You <span class="bd">Submit</span></h2>
+
+      <div class="policy-cards">
+        <div class="pc">
+          <div class="pc-label">Duration</div>
+          <div class="pc-value">1 – 3 Months</div>
+          <div class="pc-sub">Minimum hold is 1 month. Maximum hold is 3 months.</div>
+        </div>
+        <div class="pc">
+          <div class="pc-label">Cost</div>
+          <div class="pc-value">$25 + HST / Month</div>
+          <div class="pc-sub">Your regular billing is paused and replaced with the $25 hold fee for the duration.</div>
+        </div>
+        <div class="pc">
+          <div class="pc-label">Notice Required</div>
+          <div class="pc-value">At Least 2 Weeks</div>
+          <div class="pc-sub">Hold requests must be submitted at least 2 weeks in advance and cannot be backdated.</div>
+        </div>
+        <div class="pc">
+          <div class="pc-label">Refunds</div>
+          <div class="pc-value">Non-Refundable</div>
+          <div class="pc-sub">Any payments already billed prior to the hold start date are non-refundable.</div>
+        </div>
+      </div>
+
+      <div class="notice-box">
+        <p><strong>FOB Return:</strong> If you hold a Prime or Open Gym membership and your hold exceeds 30 days, you will be required to return your FOB for the duration of the hold.</p>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div>
+      <div class="sec-eye">Hold Request</div>
+      <h2 class="sec-h2">Submit Your <span class="bd">Request</span></h2>
+
+      <form class="hold-form" name="hold-request" method="POST" action="#">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name <span class="req">*</span></label>
+            <input type="text" id="fname" name="fname" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name <span class="req">*</span></label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="membership">Membership Type <span class="req">*</span></label>
+          <select id="membership" name="membership" required>
+            <option value="">Select your membership…</option>
+            <option value="prime">Prime</option>
+            <option value="unlimited">Unlimited</option>
+            <option value="basic">Basic (12 classes)</option>
+            <option value="open-gym">Open Gym</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hold-start">Hold Start Date <span class="req">*</span></label>
+            <input type="date" id="hold-start" name="hold-start" required>
+          </div>
+          <div class="form-group">
+            <label for="hold-duration">Hold Duration <span class="req">*</span></label>
+            <select id="hold-duration" name="hold-duration" required>
+              <option value="">Select duration…</option>
+              <option value="1">1 Month</option>
+              <option value="2">2 Months</option>
+              <option value="3">3 Months</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reason">Reason for Hold <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:.65rem;color:var(--muted)">(optional)</span></label>
+          <textarea id="reason" name="reason" placeholder="Vacation, injury, travel…"></textarea>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="policy-agree" name="policy-agree" required>
+          <label for="policy-agree">I have read and understand the hold policy. I acknowledge that previously billed payments are non-refundable, and that a $25 + HST hold fee applies per month. I understand that at least 2 weeks' notice is required and the hold cannot be backdated.</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="fob-agree" name="fob-agree">
+          <label for="fob-agree">If applicable: I understand that if I hold a Prime or Open Gym membership for more than 30 days, I am required to return my FOB during the hold period.</label>
+        </div>
+        <button type="submit" class="form-submit">Submit Hold Request →</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">
+    <img src="images/logo-c5.png" alt="Element Movement CrossFit">
+  </div>
+  <div class="fl-info">
+    2450 Bristol Circle, Oakville ON L6H 6P6<br>
+    hello@elementmvmt.com · (905) 499-3744
+  </div>
+  <div class="fl-links">
+    <a href="https://www.instagram.com/element.mvmt/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/ElementMvmt" target="_blank">Facebook</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <span class="fl-badge">Official CrossFit Affiliate</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
