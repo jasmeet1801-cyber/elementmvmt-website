@@ -25,7 +25,7 @@ body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--charcoa
    Navigation
    ============================================ */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.7rem 2.5rem;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 1px 10px rgba(0,0,0,0.05)}
-.nav-logo img{height:72px;width:auto;display:block}
+.nav-logo img{height:100px;width:auto;display:block}
 .nav-links{display:flex;gap:1.6rem;list-style:none}
 .nav-links a{font-size:0.73rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--bd)}
