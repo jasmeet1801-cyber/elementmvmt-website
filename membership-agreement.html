@@ -17,8 +17,19 @@
     .agreement-section{padding:5rem 2.5rem;background:var(--white)}
     .agreement-inner{max-width:1100px;margin:0 auto}
 
-    .placeholder-slot{background:var(--lightblue);border:2px dashed rgba(43,100,177,.2);border-radius:8px;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem;margin-top:2.5rem}
-    .placeholder-slot p{font-size:.88rem;color:var(--muted);max-width:480px;margin:.8rem auto 0;line-height:1.75}
+    .ma-doc{margin-top:2.5rem;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+    .ma-intro{padding:2rem 2.5rem;background:var(--lightblue);font-size:.92rem;color:var(--mid);line-height:1.75;margin:0;border-bottom:1px solid var(--border)}
+    .ma-section{padding:2rem 2.5rem;border-bottom:1px solid var(--border)}
+    .ma-section:last-of-type{border-bottom:none}
+    .ma-section h3{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--charcoal);margin:0 0 1rem}
+    .ma-section h4{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bd);margin:1.2rem 0 .5rem}
+    .ma-section ul{margin:0;padding-left:1.2rem;list-style:disc}
+    .ma-section li{font-size:.88rem;color:var(--mid);line-height:1.75;margin-bottom:.4rem}
+    .ma-section p{font-size:.88rem;color:var(--mid);line-height:1.75;margin:.3rem 0 0}
+    .ma-section a{color:var(--bd);text-decoration:none}
+    .ma-section a:hover{text-decoration:underline}
+    .ma-footer-note{padding:1.5rem 2.5rem;background:var(--lightblue);font-size:.82rem;color:var(--mid);border-top:1px solid var(--border)}
+    .ma-footer-note a{color:var(--bd);text-decoration:none}
 
     @media(max-width:600px){
       .page-hero{padding:9rem 1.2rem 2.5rem}
@@ -80,11 +91,91 @@
          PLACEHOLDER — Paste the membership agreement text or embed
          a PDF/document viewer here when content is ready.
          ============================================================ -->
-    <div class="placeholder-slot">
-      <div style="font-size:2.5rem;margin-bottom:1rem">📄</div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;color:var(--charcoal);margin-bottom:.5rem">Content Coming Soon</div>
-      <p>The membership agreement will be displayed here. You can paste the agreement text directly into this page, embed a PDF, or link to the document.</p>
-      <a class="btn-sec" href="contact.html" style="margin-top:1.5rem;font-size:.72rem;padding:.7rem 1.4rem">Questions? Contact Us</a>
+    <div class="ma-doc">
+      <p class="ma-intro">This Membership Contract ("Contract") is made effective as of the date of purchase by and between Element Movement Inc. ("Gym") and the registered member ("Member").</p>
+
+      <div class="ma-section">
+        <h3>1. Membership, Payment &amp; Billing</h3>
+        <ul>
+          <li>Memberships begin on the date of purchase. The Member's payment method will be charged in full on the purchase date, which will serve as the recurring billing date. Membership fees will automatically bill on the same calendar date each month thereafter.</li>
+          <li>Memberships and class passes are for individual use only and may not be shared, transferred, or used by any person other than the registered member.</li>
+        </ul>
+      </div>
+
+      <div class="ma-section">
+        <h3>2. Cancellation, Hold and Refund Policy</h3>
+        <h4>2.1 Cancellation/Hold by Member</h4>
+        <ul>
+          <li>Members can cancel their membership with 2 weeks' written notice sent to <a href="mailto:hello@elementmvmt.com">hello@elementmvmt.com</a>. There is no fee to cancel the membership.</li>
+          <li>Members can put their membership on hold with 2 weeks' notice via <a href="hold.html">elementmvmt.com/hold</a>. Holds are for a minimum of 1 month extending up to a maximum of 3 months. A $25 hold fee will be billed to the member's account.</li>
+          <li>No refunds. Refunds will not be issued, under any circumstances.</li>
+        </ul>
+        <h4>2.2 Cancellation by Gym</h4>
+        <ul>
+          <li>The Gym reserves the right to cancel a membership at any time with cause.</li>
+          <li>In the event of such cancellation, a prorated refund will be provided.</li>
+        </ul>
+      </div>
+
+      <div class="ma-section">
+        <h3>3. Member Responsibilities</h3>
+        <h4>3.1 Compliance</h4>
+        <ul>
+          <li>Members agree to comply with all Gym rules and regulations.</li>
+          <li>Members must complete a waiver and membership agreement prior to starting.</li>
+        </ul>
+        <h4>3.2 Conduct</h4>
+        <ul>
+          <li>Members must behave respectfully towards staff and other members.</li>
+          <li>Any form of harassment, abuse, or misconduct will not be tolerated.</li>
+          <li>Members are expected to treat the gym and equipment with care, and as requested by coaches and Element Movement staff. Damage to the gym or its equipment may be billed to a member if carelessness is found to be the cause.</li>
+        </ul>
+      </div>
+
+      <div class="ma-section">
+        <h3>4. Gym Responsibilities</h3>
+        <h4>4.1 Facilities</h4>
+        <ul>
+          <li>The Gym will provide a clean, safe, and properly maintained facility.</li>
+          <li>The Gym will ensure equipment is in good working condition.</li>
+        </ul>
+        <h4>4.2 Staff</h4>
+        <ul>
+          <li>The Gym will provide qualified and certified trainers.</li>
+          <li>The Gym will offer guidance and support to members as needed.</li>
+        </ul>
+      </div>
+
+      <div class="ma-section">
+        <h3>5. Class Reservations and Attendance</h3>
+        <h4>5.1 Reservations</h4>
+        <ul>
+          <li>Members are required to reserve their spot in class at least 12 hours in advance.</li>
+          <li>Reservations should be made through ZenPlanner/SugarWOD.</li>
+          <li>Members that have not signed up and show up to a class that is full will not be allowed to join the class.</li>
+          <li>Members must check in through ZenPlanner or SugarWOD when they arrive at a class, including Open Gym. The Gym reserves the right to charge a $25 administration fee if a member repeatedly fails to check in for scheduled classes.</li>
+          <li>Cancellations must be made within 12 hours of class. Failure to do so may result in a $25 charge.</li>
+        </ul>
+        <h4>5.2 Attendance</h4>
+        <ul>
+          <li>Members are encouraged to attend classes regularly to achieve their fitness goals.</li>
+          <li>Consistent attendance is celebrated. Members who attend a minimum of twelve (12) classes in a month will receive a sticker and be mentioned in the monthly Whiteboard. Members who achieve this attendance standard every month during the fiscal year will be recognized as a Committed Club Member of the Year and will receive an exclusive gift. The Gym reserves the right to change or cancel the committed club/recognition program at any time.</li>
+        </ul>
+      </div>
+
+      <div class="ma-section">
+        <h3>6. Miscellaneous</h3>
+        <h4>6.1 Governing Law</h4>
+        <p>This Contract will be governed by the laws of the Province of Ontario.</p>
+        <h4>6.2 Entire Agreement</h4>
+        <p>This Contract constitutes the entire agreement between the parties and supersedes any prior agreements or understandings.</p>
+        <h4>6.3 Amendments</h4>
+        <p>Any amendments to this Contract must be made in writing and signed by both parties or acknowledged through ZenPlanner.</p>
+      </div>
+
+      <div class="ma-footer-note">
+        Questions about your membership agreement? <a href="contact.html">Contact us</a>.
+      </div>
     </div>
     <!-- ============================================================ -->
 
