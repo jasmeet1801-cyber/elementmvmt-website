@@ -208,7 +208,8 @@ footer{background:var(--charcoal);padding:2.2rem 2.5rem;display:grid;grid-templa
 .fl-links{display:flex;gap:1.3rem;flex-wrap:wrap}
 .fl-links a{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
 .fl-links a:hover{color:var(--bl)}
-.fl-badge{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(113,191,234,.35);padding:.28rem .62rem;border-radius:2px;white-space:nowrap}
+.fl-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bl);border:1px solid rgba(113,191,234,.35);padding:.28rem .62rem;border-radius:2px;white-space:nowrap}
+.fl-badge-img{height:28px;width:auto;display:block}
 
 /* ============================================
    Hamburger Nav Button
