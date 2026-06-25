@@ -17,8 +17,9 @@
     .whiteboard-section{padding:5rem 2.5rem;background:var(--white)}
     .whiteboard-inner{max-width:1100px;margin:0 auto}
 
-    .placeholder-slot{background:var(--lightblue);border:2px dashed rgba(43,100,177,.2);border-radius:8px;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem;margin-top:2.5rem}
-    .placeholder-slot p{font-size:.88rem;color:var(--muted);max-width:480px;margin:.8rem auto 0;line-height:1.75}
+    .whiteboard-img-wrap{margin-top:2.5rem;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--lightblue)}
+    .whiteboard-img-wrap img{width:100%;height:auto;display:block}
+    .whiteboard-cta{text-align:center;margin-top:1.5rem}
 
     @media(max-width:600px){
       .page-hero{padding:9rem 1.2rem 2.5rem}
@@ -27,6 +28,11 @@
   </style>
 </head>
 <body>
+
+<div class="promo-banner" id="promoBanner">
+  🎉 <strong>10% OFF</strong> all memberships — <a href="get-started.html">get started today</a>!
+  <button class="pb-close" id="promoBannerClose" aria-label="Dismiss banner">&times;</button>
+</div>
 
 <nav>
   <a href="index.html" class="nav-logo">
@@ -76,18 +82,12 @@
     <div class="sec-eye">Community Results</div>
     <h2 class="sec-h2">Today's <span class="bd">Board</span></h2>
 
-    <!-- ============================================================
-         PLACEHOLDER — Embed the whiteboard tool or results feed here.
-         This could be a SugarWOD embed, a leaderboard, or custom
-         content when ready.
-         ============================================================ -->
-    <div class="placeholder-slot">
-      <div style="font-size:2.5rem;margin-bottom:1rem">📋</div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;color:var(--charcoal);margin-bottom:.5rem">Content Coming Soon</div>
-      <p>The whiteboard results and leaderboard will be embedded here. This could be a SugarWOD leaderboard, a results feed, or a custom solution.</p>
-      <a class="btn-pri" href="https://app.sugarwod.com" target="_blank" style="margin-top:1.5rem">Open SugarWOD →</a>
+    <div class="whiteboard-img-wrap">
+      <img src="images/Whiteboard.webp" alt="Element Movement Whiteboard — community results and benchmarks">
     </div>
-    <!-- ============================================================ -->
+    <div class="whiteboard-cta">
+      <a class="btn-pri" href="https://app.sugarwod.com" target="_blank">Open SugarWOD →</a>
+    </div>
 
   </div>
 </section>
