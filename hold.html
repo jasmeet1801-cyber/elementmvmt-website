@@ -77,6 +77,15 @@
   <button class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 
+<div id="form-success-banner" style="display:none;background:#1e7a3f;color:#fff;text-align:center;padding:1rem 1.5rem;font-family:'Barlow',sans-serif;font-size:.9rem;font-weight:600">
+  Thanks! Your hold request has been submitted — we'll confirm by email shortly.
+</div>
+<script>
+  if (new URLSearchParams(window.location.search).get('sent') === '1') {
+    document.getElementById('form-success-banner').style.display = 'block';
+  }
+</script>
+
 <!-- Page Hero -->
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -144,7 +153,11 @@
       <div class="sec-eye">Hold Request</div>
       <h2 class="sec-h2">Submit Your <span class="bd">Request</span></h2>
 
-      <form class="hold-form" name="hold-request" method="POST" action="#">
+      <form class="hold-form" name="hold-request" method="POST" action="https://api.web3forms.com/submit">
+        <input type="hidden" name="access_key" value="6a2bebc0-c840-4e6c-a92c-60fa3bf2ad33">
+        <input type="hidden" name="subject" value="New Membership Hold Request — Element Movement">
+        <input type="hidden" name="from_name" value="Element Movement Website">
+        <input type="hidden" name="redirect" value="https://elementmvmt.com/hold.html?sent=1">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First Name <span class="req">*</span></label>
