@@ -38,11 +38,11 @@
     .ld-ad{background:rgba(43,100,177,.2)}
     .ld-teen{background:rgba(113,191,234,.3)}
 
-    /* ZenPlanner embed */
+    /* ZenPlanner */
     .zp-section{padding:4rem 2.5rem;background:var(--offwhite)}
     .zp-inner{max-width:1100px;margin:0 auto}
-    .zp-embed{border:1.5px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;margin-top:2rem;box-shadow:0 2px 20px rgba(0,0,0,.05)}
-    .zp-embed iframe{width:100%;height:680px;border:none;display:block}
+    .zp-cta-box{border:1.5px solid var(--border);border-radius:8px;background:#fff;margin-top:2rem;box-shadow:0 2px 20px rgba(0,0,0,.05);padding:3rem;text-align:center}
+    .zp-cta-box img{height:48px;width:auto;margin-bottom:1.2rem}
 
     /* Book strip */
     .book-strip{background:var(--charcoal);padding:3rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
@@ -52,7 +52,6 @@
   @media(max-width:900px){
     .sched-grid{grid-template-columns:repeat(4,1fr)}
     .sday:nth-child(n+5){border-top:1px solid var(--border)}
-    .zp-embed iframe{height:520px}
     .book-strip{flex-direction:column;align-items:flex-start}
   }
   @media(max-width:600px){
@@ -60,7 +59,7 @@
     .sched-grid{grid-template-columns:repeat(2,1fr)}
     .zp-section{padding:3rem 1.2rem}
     .schedule-section{padding:3rem 1.2rem}
-    .zp-embed iframe{height:420px}
+    .zp-cta-box{padding:2rem 1.2rem}
     .book-strip{padding:2.2rem 1.2rem}
     .book-strip-btns{flex-direction:column;width:100%}
     .book-strip-btns a{text-align:center}
@@ -206,14 +205,11 @@
   <div class="zp-inner">
     <div class="sec-eye">Book a Class</div>
     <h2 class="sec-h2">Reserve Your <span class="bd">Spot</span></h2>
-    <p style="font-size:.9rem;color:var(--mid);margin-top:.6rem;max-width:540px;line-height:1.75">The live calendar below is powered by ZenPlanner. Log in or create an account to reserve your spot in any upcoming class.</p>
-    <div class="zp-embed">
-      <iframe
-        src="https://elementmvmt.sites.zenplanner.com/calendar.cfm"
-        title="Element Movement CrossFit — Class Calendar"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
+    <p style="font-size:.9rem;color:var(--mid);margin-top:.6rem;max-width:540px;line-height:1.75">Our live calendar is powered by ZenPlanner. Log in or create an account to reserve your spot in any upcoming class.</p>
+    <div class="zp-cta-box">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;text-transform:uppercase;color:var(--charcoal);margin-bottom:.5rem">View the Live Calendar</div>
+      <p style="font-size:.88rem;color:var(--muted);max-width:480px;margin:0 auto 1.5rem;line-height:1.75">ZenPlanner opens in a new tab where you can log in, browse upcoming classes, and reserve your spot.</p>
+      <a class="btn-pri" href="https://elementmvmt.sites.zenplanner.com/calendar.cfm" target="_blank">Open ZenPlanner Calendar →</a>
     </div>
   </div>
 </section>
