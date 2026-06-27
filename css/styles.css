@@ -22,20 +22,9 @@ html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--charcoal);overflow-x:hidden}
 
 /* ============================================
-   Promo Banner
-   ============================================ */
-.promo-banner{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--bd);color:#fff;text-align:center;padding:.65rem 2.6rem;font-family:'Barlow',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.02em;line-height:1.5}
-.promo-banner strong{font-weight:800;text-transform:uppercase;letter-spacing:.04em}
-.promo-banner a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.5);font-weight:700}
-.promo-banner a:hover{text-decoration-color:#fff}
-.promo-banner .pb-close{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:1.1rem;cursor:pointer;opacity:.75;line-height:1;padding:.2rem .4rem}
-.promo-banner .pb-close:hover{opacity:1}
-@media(max-width:600px){.promo-banner{font-size:.68rem;padding:.6rem 2.2rem .6rem .8rem}}
-
-/* ============================================
    Navigation
    ============================================ */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.4rem 2.5rem;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 1px 10px rgba(0,0,0,0.05);transition:top .15s}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.4rem 2.5rem;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 1px 10px rgba(0,0,0,0.05)}
 .nav-logo img{height:140px;width:auto;display:block}
 .nav-links{display:flex;gap:1.6rem;list-style:none}
 .nav-links a{font-size:0.73rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}

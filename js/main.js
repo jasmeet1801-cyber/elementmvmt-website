@@ -62,45 +62,10 @@ function initMobileNav() {
 }
 
 /**
- * Promo banner — shifts the fixed nav and page content down by the
- * banner's actual rendered height, so spacing stays correct at any
- * screen size or text-wrap. Dismissal is remembered via localStorage.
- */
-function initPromoBanner() {
-  var banner = document.getElementById('promoBanner');
-  var nav = document.querySelector('nav');
-  if (!banner || !nav) return;
-
-  if (localStorage.getItem('promoBannerDismissed') === '1') {
-    banner.style.display = 'none';
-    return;
-  }
-
-  function adjust() {
-    var h = banner.offsetHeight;
-    nav.style.top = h + 'px';
-    document.body.style.paddingTop = h + 'px';
-  }
-  adjust();
-  window.addEventListener('resize', adjust);
-
-  var closeBtn = document.getElementById('promoBannerClose');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function() {
-      banner.style.display = 'none';
-      nav.style.top = '0px';
-      document.body.style.paddingTop = '0px';
-      localStorage.setItem('promoBannerDismissed', '1');
-    });
-  }
-}
-
-/**
  * Init on DOM ready
  */
 document.addEventListener('DOMContentLoaded', function() {
   initFAQ();
   initNav();
   initMobileNav();
-  initPromoBanner();
 });
