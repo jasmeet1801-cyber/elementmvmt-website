@@ -225,6 +225,7 @@ footer{background:var(--charcoal);padding:2.2rem 2.5rem;display:grid;grid-templa
    ============================================ */
 @media(max-width:900px){
   /* Nav */
+  .nav-logo img{height:80px}
   .nav-burger{display:flex}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:.5rem 0;box-shadow:0 8px 24px rgba(0,0,0,.08)}
   .nav-links.open{display:flex}
