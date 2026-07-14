@@ -22,9 +22,16 @@ html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--charcoal);overflow-x:hidden}
 
 /* ============================================
+   Promo Banner
+   ============================================ */
+.promo-banner{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--charcoal);color:#fff;text-align:center;padding:.55rem 1rem;font-size:.78rem;line-height:1.4}
+.promo-banner a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.promo-banner strong{font-weight:700}
+
+/* ============================================
    Navigation
    ============================================ */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.4rem 2.5rem;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 1px 10px rgba(0,0,0,0.05)}
+nav{position:fixed;top:36px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0.4rem 2.5rem;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 1px 10px rgba(0,0,0,0.05)}
 .nav-logo img{height:140px;width:auto;display:block}
 .nav-links{display:flex;gap:1.6rem;list-style:none}
 .nav-links a{font-size:0.73rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}
@@ -272,7 +279,8 @@ footer{background:var(--charcoal);padding:2.2rem 2.5rem;display:grid;grid-templa
    Responsive — Mobile (≤ 600px)
    ============================================ */
 @media(max-width:600px){
-  nav{padding:.6rem 1.2rem}
+  .promo-banner{font-size:.72rem;padding:.5rem 1rem}
+  nav{top:44px;padding:.6rem 1.2rem}
   .nav-cta{font-size:.65rem;padding:.45rem .9rem}
 
   section{padding:3.5rem 1.2rem}
