@@ -18,7 +18,7 @@
 }
 
 /* Base */
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:180px}
 body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--charcoal);overflow-x:hidden}
 
 /* ============================================
@@ -224,6 +224,8 @@ footer{background:var(--charcoal);padding:2.2rem 2.5rem;display:grid;grid-templa
    Responsive — Tablet (≤ 900px)
    ============================================ */
 @media(max-width:900px){
+  html{scroll-padding-top:110px}
+
   /* Nav */
   .nav-logo img{height:80px}
   .nav-burger{display:flex}
@@ -272,6 +274,7 @@ footer{background:var(--charcoal);padding:2.2rem 2.5rem;display:grid;grid-templa
    Responsive — Mobile (≤ 600px)
    ============================================ */
 @media(max-width:600px){
+  html{scroll-padding-top:120px}
   nav{padding:.6rem 1.2rem}
   .eyebrow{font-size:.58rem;letter-spacing:.14em}
   .nav-cta{font-size:.65rem;padding:.45rem .9rem}
